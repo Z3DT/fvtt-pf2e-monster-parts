@@ -74,7 +74,7 @@
       "name": "Monster Parts"
     },
     "editor": {
-      "title": "Edit provided materials"
+      "title": "Edit contained materials"
     },
     "duplicate-key": "Material with key {key} already exists. It will be replaced.",
     "validation-failure-notification": "Material {key} failed to validate. See console (F12) for details",

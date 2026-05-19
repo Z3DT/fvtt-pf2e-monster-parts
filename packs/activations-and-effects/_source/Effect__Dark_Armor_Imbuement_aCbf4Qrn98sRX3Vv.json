@@ -1,14 +1,14 @@
 {
-  "name": "Effect: Spiked Imbuement",
+  "name": "Effect: Dark Armor Imbuement",
   "type": "effect",
   "effects": [],
   "system": {
     "_migration": {
-      "version": 0.953,
+      "version": 0.959,
       "previous": null
     },
     "description": {
-      "value": "<p>Granted by Spiked imbuement.</p><p>Tracks the duration of imbuement activation.</p>",
+      "value": "<p>Granted by Dark Armor Imbuement.</p><p>You gain darkvision.</p>",
       "gm": ""
     },
     "publication": {
@@ -19,11 +19,11 @@
     },
     "rules": [
       {
-        "key": "RollOption",
-        "option": "spiked-imbuement-activation"
+        "key": "Sense",
+        "selector": "darkvision"
       }
     ],
-    "slug": "effect-spiked-imbuement",
+    "slug": null,
     "traits": {
       "otherTags": [],
       "value": []
@@ -33,7 +33,7 @@
     },
     "duration": {
       "value": 1,
-      "unit": "minutes",
+      "unit": "hours",
       "expiry": "turn-start",
       "sustained": false
     },
@@ -49,25 +49,25 @@
     "fromSpell": false,
     "context": null
   },
-  "_id": "CIkNgSsMQ9AWqsVp",
-  "img": "systems/pf2e/icons/equipment/cursed-items/barbed-vest.webp",
+  "_id": "aCbf4Qrn98sRX3Vv",
+  "img": "systems/pf2e/icons/spells/darkvision.webp",
   "folder": null,
-  "sort": 200000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "My4TCMjLEU7yUq2Y": 3
   },
   "flags": {},
   "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.1.2",
+    "createdTime": 1779174633429,
+    "modifiedTime": 1779174934084,
+    "lastModifiedBy": "My4TCMjLEU7yUq2Y",
     "compendiumSource": null,
     "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "sf2e",
-    "systemVersion": "7.8.0",
-    "createdTime": 1767966980786,
-    "modifiedTime": 1767972317802,
-    "lastModifiedBy": "My4TCMjLEU7yUq2Y"
+    "exportSource": null
   },
-  "_key": "!items!CIkNgSsMQ9AWqsVp"
+  "_key": "!items!aCbf4Qrn98sRX3Vv"
 }

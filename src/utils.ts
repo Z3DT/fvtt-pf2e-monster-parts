@@ -12,6 +12,17 @@ export function t(
     });
 }
 
+export class I18n {
+    static key(key: I18nKey, parameters?: I18nLocalizableKey["parameters"]) {
+        return parameters
+            ? { type: "key" as const, key, parameters }
+            : { type: "key" as const, key };
+    }
+    static resolve(value: string) {
+        return { type: "resolve" as const, value };
+    }
+}
+
 function sf2eUuidRemap(s: string) {
     return s
         .replaceAll(
@@ -35,9 +46,7 @@ export function i18nFormat(
             console.warn(`Couldn't evaluate string ${m.value}: no data`);
             return m.value as I18nString;
         }
-        const s = String(
-            Roll.replaceFormulaData(i18nFormat(m.value, data) as string, data),
-        );
+        const s = String(Roll.replaceFormulaData(m.value, data));
         return (Utils.isSF ? sf2eUuidRemap(s) : s) as I18nString;
     }
     if ("type" in m && m.type == "key") {

@@ -204,19 +204,22 @@ function spellActivation({
     uuid: `Compendium.${string}.Item.${string}`;
     rank?: number;
     dc?: number;
-    max?: number;
+    max?: number | null;
     tradition?: "arcane" | "divine" | "occult" | "primal";
 }) {
-    return {
-        type: "RuleElement",
-        rule: {
-            key: "ItemCast",
-            uuid,
-            max: max ?? 1,
-            dc,
-            rank,
-        },
-    } as Omit<RuleElementEffect, "levelMin" | "levelMax">;
+    const rule = {
+        key: "ItemCast",
+        uuid,
+        dc,
+        rank,
+    };
+    if (max !== null) {
+        rule.max = max ?? 1;
+    }
+    return { type: "RuleElement", rule } as Omit<
+        RuleElementEffect,
+        "levelMin" | "levelMax"
+    >;
 }
 
 function cantripActivation({

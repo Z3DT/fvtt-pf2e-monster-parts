@@ -51,3 +51,25 @@ weapon:
   major-striking+3: >-
     This is a +3 major striking weapon. It grants +3 item bonus to attack rolls,
     deals 4 dice of damage, and can be imbued 3 times.
+staff:
+  label: Staff (Refinement)
+  cantrip: This item can cast a cantrip spell.
+  spells: This staff contains 2 spells of every rank up to rank {rank}.
+  description: >-
+    - **3rd** 1 cantrip
+    
+    - **5th** 2 1st-rank spells
+    
+    - **7th** 2 2nd-rank spells
+    
+    - **9th** 2 3rd-rank spells
+    
+    - **11th** 2 4th-rank spells
+    
+    - **13th** 2 5th-rank spells
+    
+    - **15th** 2 6th-rank spells
+    
+    - **17th** 2 7th-rank spells
+    
+    - **19th** 2 8th-rank spells

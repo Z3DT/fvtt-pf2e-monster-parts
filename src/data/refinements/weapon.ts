@@ -17,7 +17,7 @@ export function addWeaponRefinements(): MaterialData[] {
         itemPredicate: [
             "item:type:weapon",
             `item:damage:type:${damage}`,
-            { not: "item:handwraps-of-mighty-blows" },
+            { not: "item:tag:handwraps-of-mighty-blows" },
         ],
         monsterPredicate: ["item:type:melee", `item:damage:type:${damage}`],
         header: {

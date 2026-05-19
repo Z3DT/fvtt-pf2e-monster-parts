@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.7.4] - 2026-05-18
+
+### Added
+- Add Dark Armor imbued property and Staff refinement (actually an imbued property as well due to technical reasons).
+
 ## [0.7.3] - 2026-05-18
 
 ### Added

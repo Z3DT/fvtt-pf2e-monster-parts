@@ -12,7 +12,7 @@
 | Charisma         | BB     | ✔      |
 | Cold*            | BB     | ✔      |
 | Constitution     | BB     | ✔      |
-| Dark Armor       | ES     | ❌      |
+| Dark Armor       | ES     | ✔      |
 | Darkness         | SU/ES  | ✔      |
 | Dexterity        | BB     | ✔      |
 | Death            | ES     | ✔      |

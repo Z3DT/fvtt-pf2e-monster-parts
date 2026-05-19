@@ -10,13 +10,15 @@ import { createImbueMind } from "./mind";
 import { createImbueDarkness } from "./darkness";
 import { createImbueHoly } from "./holy";
 import { createImbueUnholy } from "./unholy";
-import { createImbueBurningBarbs } from "@data/imbues/elemental-storm/burning-barbs";
+import { createImbueBurningBarbs } from "./burning-barbs";
+import { createImbueDarkArmor } from "./dark-armor";
 
 export function createElementalStormImbues() {
     return [
         ...createImbueAir(),
         ...createImbueBody(),
         createImbueBurningBarbs(),
+        createImbueDarkArmor(),
         ...createImbueDarkness(),
         ...createImbueDeath(),
         ...createImbueElectricity(),

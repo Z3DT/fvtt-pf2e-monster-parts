@@ -1,4 +1,4 @@
-import { lkeygen } from "@src/utils";
+import { I18n, lkeygen } from "@src/utils";
 import { MaterialData } from "../../material";
 import * as R from "remeda";
 import { helpers } from "@data/helpers";
@@ -65,13 +65,9 @@ export function createImbueBurningBarbs(): MaterialData {
                     },
                 ),
                 ({ frequency }) => ({
-                    text: {
-                        type: "key",
-                        key: lkey("header.activation"),
-                        parameters: {
-                            frequency: { type: "key", key: frequency },
-                        },
-                    },
+                    text: I18n.key(lkey("header.activation"), {
+                        frequency: I18n.key(frequency),
+                    }),
                     sort: 1,
                 }),
             ),
@@ -88,16 +84,14 @@ export function createImbueBurningBarbs(): MaterialData {
                         ],
                         outcome: ["success"],
                         title: lkey("label"),
-                        text: {
-                            type: "key",
-                            key: lkey("effects.activation-note-success"),
-                            parameters: {
-                                damage: {
-                                    type: "resolve",
-                                    value: "ternary(gte(@material.level, 20), @item.level *2, ternary(gte(@material.level, 14), floor(@item.level *1.5), @item.level))",
-                                },
+                        text: I18n.key(
+                            lkey("effects.activation-note-success"),
+                            {
+                                damage: I18n.resolve(
+                                    "ternary(gte(@material.level, 20), @item.level *2, ternary(gte(@material.level, 14), floor(@item.level *1.5), @item.level))",
+                                ),
                             },
-                        },
+                        ),
                     },
                 },
                 {
@@ -112,18 +106,14 @@ export function createImbueBurningBarbs(): MaterialData {
                         ],
                         outcome: ["criticalSuccess"],
                         title: lkey("label"),
-                        text: {
-                            type: "key",
-                            key: lkey(
-                                "effects.activation-note-critical-success",
-                            ),
-                            parameters: {
-                                damage: {
-                                    type: "resolve",
-                                    value: "ternary(gte(@material.level, 20), @item.level *4, ternary(gte(@material.level, 14), @item.level *3,@item.level *2))",
-                                },
+                        text: I18n.key(
+                            lkey("effects.activation-note-critical-success"),
+                            {
+                                damage: I18n.resolve(
+                                    "ternary(gte(@material.level, 20), @item.level *4, ternary(gte(@material.level, 14), @item.level *3,@item.level *2))",
+                                ),
                             },
-                        },
+                        ),
                     },
                 },
             ],

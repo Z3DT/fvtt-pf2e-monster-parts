@@ -34,4 +34,7 @@ export enum Spells {
 
     // Unholy
     ChillingDarkness = "Compendium.pf2e.spells-srd.Item.sRfSBHWHdbIa0aGc",
+
+    // Dark Armor
+    Darkness = "Compendium.pf2e.spells-srd.Item.4GE2ZdODgIQtg51c",
 }
